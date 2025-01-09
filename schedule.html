@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Schedule Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #e0eafc, #cfdef3);
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: white;
+      padding: 15px 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .header input {
+      width: 300px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .header .notification {
+      background: #4caf50;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .header .user-info {
+      text-align: right;
+      font-size: 14px;
+    }
+
+    .content {
+      padding: 20px;
+      flex: 1;
+      overflow-y: auto;
+    }
+
+    .schedule-container {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+    }
+
+    .schedule-container h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #2575fc;
+    }
+
+    .schedule-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .schedule-table th {
+      text-align: left;
+      padding: 12px;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: white;
+      border-bottom: 2px solid #ddd;
+    }
+
+    .schedule-table td {
+      text-align: left;
+      padding: 12px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .add-schedule {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+      gap: 10px;
+    }
+
+    .add-schedule input, .add-schedule button {
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    .add-schedule button {
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .add-schedule button:hover {
+      background: #4caf50;
+    }
+
+    .delete-button {
+      background: #ff5722;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .delete-button:hover {
+      background: #e64a19;
+    }
+
+    a {
+      text-decoration: none; 
+      color: #ffffff; 
+      background-color: #007bff;
+      padding: 10px 20px; 
+      border-radius: 5px; 
+      font-size: 16px; 
+      font-weight: bold; 
+      display: inline-block; 
+      transition: all 0.3s ease; 
+    }
+    
+    a:hover {
+      background-color: #0056b3; 
+      color: #ffcc00; 
+      transform: scale(1.05); 
+    }
+    
+    a i {
+      margin-right: 5px; 
+      font-size: 18px; 
+      vertical-align: middle; 
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <input type="text" placeholder="Search...">
+    <button class="notification">🔔 Notifications</button>
+    <div class="user-info">
+      Maulana<br>
+      NPM: 23670000
+    </div>
+  </div>
+  <div class="content">
+    <div class="schedule-container">
+      <h2>My Schedule</h2>
+      <table class="schedule-table">
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Event</th>
+            <th>Location</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>08:00 AM</td>
+            <td>Web Development Class</td>
+            <td>Room A-101</td>
+            <td><button class="delete-button">Delete</button></td>
+          </tr>
+          <tr>
+            <td>10:00 AM</td>
+            <td>Data Science Workshop</td>
+            <td>Room B-202</td>
+            <td><button class="delete-button">Delete</button></td>
+          </tr>
+          <tr>
+            <td>01:00 PM</td>
+            <td>Team Meeting</td>
+            <td>Online (Zoom)</td>
+            <td><button class="delete-button">Delete</button></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="add-schedule">
+        <input type="text" placeholder="Event Name">
+        <input type="text" placeholder="Time">
+        <input type="text" placeholder="Location">
+        <button>Add Schedule</button>
+      </div>
+    </div>
+  </div>
+  
+  <a href="index.html" class="button">
+    <i>🏠</i> Back to Dashboard
+  </a>
+</body>
+</html>
